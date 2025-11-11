@@ -1,0 +1,32 @@
+[package]
+name = "stitchbot"
+version = "0.3.0"
+edition = "2021"
+
+[[bin]]
+name = "stitchbot"
+path = "src/main.rs"
+
+[[bin]]
+name = "miner_listener"
+path = "src/miner_listener.rs"
+
+[dependencies]
+petgraph = "0.6"
+kaspa-rpc-core = { version = "0.14", features = ["websocket"] }
+kaspa-wallet-core = "0.14"
+kaspa-consensus-core = "0.14"
+kaspa-p2p-lib = "0.15"
+tokio = { version = "1.38", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.8"
+log = "0.4"
+env_logger = "0.11"
+anyhow = "1.0"
+keyring = "2.3"
+zeroize = "1.8"
+secp256k1 = "0.28"
+bincode = "1.3"
+rand = "0.8"
+chrono = "0.4"
+hex = "0.4"
