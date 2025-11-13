@@ -5,10 +5,13 @@ pub struct Config {
     pub rpc_url: String,
     pub p2p_port: u16,
     pub p2p_bootstrap_peers: Vec<String>,
-    pub stitch_reward_sompi: u64,
+    pub adaptive: bool,
+    pub base_min_delta: u64,
+    pub base_rate_limit: u64,
+    pub base_reward_sompi: u64,
+    pub max_reward_sompi: u64,
+    pub min_rate_limit: u64,
     pub dag_window: usize,
-    pub min_blue_delta: u64,
-    pub rate_limit_seconds: u32,
 }
 
 impl Config {
