@@ -1,12 +1,11 @@
-# Node RPC (WebSocket for live updates)
 rpc_url = "ws://127.0.0.1:16110"
-
-# P2P Settings
 p2p_port = 16110
 p2p_bootstrap_peers = ["127.0.0.1:16110"]
 
-# Stitch Parameters
-stitch_reward_sompi = 100000      # 0.001 KAS
+adaptive = true
+base_min_delta = 1000
+base_rate_limit = 60
+base_reward_sompi = 100000
+max_reward_sompi = 1000000
+min_rate_limit = 10
 dag_window = 10000
-min_blue_delta = 500
-rate_limit_seconds = 30
