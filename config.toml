@@ -5,8 +5,20 @@ rpc_url = "ws://127.0.0.1:16110"
 p2p_port = 16110
 p2p_bootstrap_peers = ["127.0.0.1:16110"]
 
-# Stitch Parameters
-stitch_reward_sompi = 100000      # 0.001 KAS
-dag_window = 10000
-min_blue_delta = 500
-rate_limit_seconds = 30
+# === ADAPTIVE STITCHING ===
+adaptive = true
+
+# Base values (used when network is calm)
+base_min_delta = 1000          # Only stitch if blue delta > 1000 (in calm state)
+base_rate_limit = 60           # 1 stitch per minute max (calm)
+base_reward_sompi = 100000     # 0.001 KAS base reward
+
+# Caps (prevent runaway)
+max_reward_sompi = 1000000     # 0.01 KAS max
+min_rate_limit = 10            # Never faster than 10s
+
+# === FALLBACK (if adaptive = false) ===
+# stitch_reward_sompi = 100000
+# dag_window = 10000
+# min_blue_delta = 500
+# rate_limit_seconds = 30
