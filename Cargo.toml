@@ -1,7 +1,7 @@
 [package]
 name = "stitchbot"
 version = "1.0.1"
-edition = "2025"
+edition = "2024"
 
 [[bin]]
 name = "stitchbot"
@@ -13,10 +13,10 @@ path = "src/miner_listener.rs"
 
 [dependencies]
 petgraph = "0.6"
-kaspa-consensus-core = { git = "https://github.com/kaspanet/rusty-kaspa", tag = "v1.0.1" }
-kaspa-rpc-core       = { git = "https://github.com/kaspanet/rusty-kaspa", tag = "v1.0.1" }
-kaspa-wallet-core    = { git = "https://github.com/kaspanet/rusty-kaspa", tag = "v1.0.1" }
-kaspa-p2p-lib        = { git = "https://github.com/kaspanet/rusty-kaspa", tag = "v1.0.1" }
+kaspa-consensus-core = { version = "0.15.0" }
+kaspa-rpc-core       = { version = "0.15.0" }
+kaspa-wallet-core    = { version = "0.15.0" }
+kaspa-p2p-lib        = { version = "0.15.0" }
 tokio = { version = "1.38", features = ["full"] }
 serde = { version = "1.0", features = ["derive"] }
 toml = "0.8"
@@ -31,3 +31,6 @@ rand = "0.8"
 chrono = "0.4"
 hex = "0.4"
 blake2s_simd = "1.0"
+kaspa-addresses = "0.15.0"
+rustworkx-core = "0.17.1"
+graphrs = "0.11.14"
