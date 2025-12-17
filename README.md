@@ -10,7 +10,7 @@ Let W = average tip width, D = average fracture duration.
 Reorg probability ≈ exp(−c · blue_score / (W · D)) for some constant c.
 StitchBot reduces W
 
-THIS IS AN UNTESTED/UNBUILT EXPERIMENTAL/CONCEPTUAL program 
+ 
 
 # stitchbot
 dag stability 
@@ -26,7 +26,7 @@ Detects topological fractures → broadcasts stitch requests → pays miners to 
 
 ## Features
 
-read the code ffs
+
 
 λ   = honest block propagation rate (blocks/sec);
 μ   = adversarial block rate (we assume μ ≤ 0.5λ for security);
